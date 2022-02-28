@@ -1,0 +1,43 @@
+{
+  "name": "swow-cloud/rpc-server",
+  "description": "JSON RPC server implementation for PHP.",
+  "type": "library",
+  "keywords": [
+    "php",
+    "rpc",
+    "json-rpc",
+    "swow"
+  ],
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "heping",
+      "email": "847050412@qq.com"
+    }
+  ],
+  "require": {
+    "php": ">=8.0",
+    "ext-swow": "*",
+    "ext-json": "*",
+    "psr/log": "^3.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9.5",
+    "vimeo/psalm": "^4.15"
+  },
+  "autoload": {
+    "psr-4": {
+      "SwowCloud\\RpcServer\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "SwowCloud\\RpcServer\\Tests\\": "tests/"
+    }
+  },
+  "scripts": {
+    "test": "vendor/bin/phpunit --do-not-cache",
+    "lint": "vendor/bin/psalm --no-cache"
+  }
+}
